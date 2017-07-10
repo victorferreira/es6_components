@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #121212;
+  font-family: 'Lato', sans-serif;
+  color: #a0a0a0;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  background-image: linear-gradient(rgb(70, 76, 82), rgb(7, 7, 8) 85%);
+  display: flex;
+  height: 100vh;
+  overflow: scroll;
+  padding: 50px;
+  width: 100%;
+}
+
+.album-info {
+  margin-right: 50px;
+  text-align: center;
+}
+
+.album-image {
+  width: 250px;
+  height: 250px;
+}
+
+.album-title {
+  color: #fff;
+  font-size: 24px;
+  margin: 20px 0 0;
+}
+
+.album-artist {
+  font-size: 18px;
+}
+
+.album-counter {
+  font-size: 14px;
+}
+
+.album-artist,
+.album-counter {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.album-musics {
+  width: 100%;
+}
+
+.music {
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 300;
+  transition: background .3s;
+  width: 100%;
+}
+
+.music.active {
+  color: #16a248;
+}
+
+.music.active .music-title {
+  color: #16a248;
+}
+
+.music:hover {
+  background: #000;
+}
+
+.music-number,
+.music-title,
+.music-duration {
+  padding: 10px;
+}
+
+.music-number {
+  margin-right: 20px;
+  min-width: 25px;
+}
+
+.music-number:after {
+  content: '.';
+}
+
+.music-title {
+  color: rgba(255, 255, 255, 0.81);
+  width: 100%;
+}
+
+.music-duration {
+  text-align: right;
+  width: 100%;
+}
