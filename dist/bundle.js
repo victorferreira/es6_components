@@ -89,6 +89,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tracks_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_js__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__customElement_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__customElement_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__customElement_js__);
+
 
 
 
@@ -223,6 +226,23 @@ const data = {
 };
 
 module.exports = data;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+class CustomElement extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({mode: 'open'});
+        this.input = document.createElement('input');
+        this.shadowRoot.appendChild(this.input);
+    }
+}
+
+customElements.define('custom-element', CustomElement);
+
+module.exports = CustomElement;
 
 /***/ })
 /******/ ]);
